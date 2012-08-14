@@ -156,11 +156,8 @@ on boot
 # BB mapping symbolic name to the logging ttyACM port
     symlink /dev/ttyACM2 /dev/log_modem
 
-service surfaceflinger /system/bin/surfaceflinger
-    class main
-    user root
-    group graphics
-    onrestart restart zygote
+# Hacky attempt
+    exec /system/bin/surfaceflinger_hack.sh
 
 # Write Wi-Fi Mac
 service wifimacwriter /system/bin/wifimacwriter
@@ -463,3 +460,6 @@ service BtService /system/bin/sh /system/etc/BtService.sh
     group root
     disabled
     oneshot
+
+
+exec /system/bin/surfaceflinger

@@ -23,7 +23,6 @@ DEVICE_PACKAGE_OVERLAYS += device/asus/tf700t/overlay
 
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/init.rc:root/init.rc \
     $(LOCAL_PATH)/ramdisk/init.cardhu.rc:root/init.cardhu.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.cardhu.rc:root/ueventd.cardhu.rc \
     $(LOCAL_PATH)/ramdisk/init.cardhu.usb.rc:root/init.cardhu.usb.rc
@@ -33,6 +32,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/cpu.sh:system/bin/cpu.sh \
     $(LOCAL_PATH)/prebuilt/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+
+# Prebuilt configeration files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/prebuilt/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/prebuilt/audio_effects.conf:system/etc/audio_effects.conf \
+    $(LOCAL_PATH)/prebuilt/asound.conf:system/etc/asound.conf
+
+# Fuck surfaceflinger hack 
+# TODO: figure out why i have to put up with this crap.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/surfaceflinger_hack.sh:system/bin/surfaceflinger_hack.sh
 
 # Input device configeration files
 PRODUCT_COPY_FILES += \

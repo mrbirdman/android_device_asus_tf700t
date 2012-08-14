@@ -30,9 +30,6 @@ TARGET_BOOTLOADER_BOARD_NAME := cardhu
 #ICS Camera HAL
 COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DICS_AUDIO_BLOB
 
-# Hacky ass workaround for surfaceflinger
-TARGET_PROVIDES_INIT_RC := true
-
 # Target arch settings
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_ABI := armeabi-v7a

@@ -24,6 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += device/asus/tf700t/overlay
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.cardhu.rc:root/init.cardhu.rc \
+    $(LOCAL_PATH)/ramdisk/fstab.cardhu:root/fstab.cardhu \
     $(LOCAL_PATH)/ramdisk/ueventd.cardhu.rc:root/ueventd.cardhu.rc \
     $(LOCAL_PATH)/ramdisk/init.cardhu.usb.rc:root/init.cardhu.usb.rc
 
@@ -32,6 +33,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/cpu.sh:system/bin/cpu.sh \
     $(LOCAL_PATH)/prebuilt/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+    	
 
 # Prebuilt configeration files
 PRODUCT_COPY_FILES += \
@@ -39,6 +41,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/prebuilt/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/prebuilt/asound.conf:system/etc/asound.conf
+
+# Kernel modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
 
 # Fuck surfaceflinger hack 
 # TODO: figure out why i have to put up with this crap.
@@ -58,7 +64,7 @@ PRODUCT_COPY_FILES += \
 # Camera/WiFi/BT Firmware
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/nvram.txt:system/etc/nvram_4329.txt \
-    $(LOCAL_PATH)/prebuilt/firmware/BCM4329B1_002.002.023.0797.0863.hcd:system/etc/firmware/BCM4329B1_002.002.023.0797.0863.hcd \
+    $(LOCAL_PATH)/prebuilt/firmware/BCM4330B1_002.001.003.0750.0820.hcd:system/etc/firmware/BCM4330B1_002.001.003.0750.0820.hcd \
     $(LOCAL_PATH)/prebuilt/firmware/fw_bcmdhd.bin:system/vendor/firmware/fw_bcmdhd.bin \
     $(LOCAL_PATH)/prebuilt/firmware/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin \
     $(LOCAL_PATH)/prebuilt/firmware/fw_bcmdhd_p2p.bin:system/vendor/firmware/fw_bcmdhd_p2p.bin

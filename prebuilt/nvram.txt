@@ -1,90 +1,45 @@
-# bcm94329sdagb board
-# $Copyright (C) 2008 Broadcom Corporation$
-# $id$
-
-sromrev=3
+# Azurewave Release 2011/12/29
+# NH665 bgn+BT+FM
+manfid=0x2d0
+prodid=0x0552
 vendid=0x14e4
-devid=0x432f
-boardtype=0x57e
-
-# board revision 1.1
+devid=0x4360
+boardtype=0x0552
 boardrev=0x11
-
-# boardflags
-boardflags=0x10000200
-boardflags2=0x00400000
-
-# specify the xtalfreq if it is otherthan 38.4MHz
-xtalfreq=37400
-
-aa2g=3
-aa5g=1
-
-ag0=0x82
-ag1=0x84
-
-# 11g paparams
-pa0b0=5107
-pa0b1=64308
-pa0b2=65182
-pa0itssit=62
-pa0maxpwr=66
-opo=0
-mcs2gpo0=0x2222
-mcs2gpo1=0x2222
-
-# sel = 1 : 20% evm  sel = 2 : 27% evm  sel = 3 : 16% evm
-cckdigfilttype=1
-
-# 11a paparams lowband
-pa1lob0=6654
-pa1lob1=63794
-pa1lob2=65134
-# paparams midband
-pa1b0=5970
-pa1b1=63982
-pa1b2=65122
-#paparams high band
-pa1hib0=5910
-pa1hib1=63998
-pa1hib2=65130
-
-pa1itssit=62
-pa1maxpwr=60
-opo=0
-mcs5gpo=0x22222222
-
-# 11g rssi params
-rssismf2g=0xa
-rssismc2g=0xb
-rssisav2g=0x3
-bxa2g=0
-
-# 11a rssi params
-rssismf5g=0x8
-rssismc5g=0x6
-rssisav5g=0x0
-bxa2g=0
-
-# country code
-ccode=ALL
-cctl=0x0
-
-# Channel gain adjustments 
-5g_cga=0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
-boardnum=2048
-macaddr=00:90:4c:c5:34:23
-#######
+# this design has 2.4GHz SP3T switch
+boardflags=0x00081200
 nocrc=1
-
-#for mfgc
-otpimagesize=182
-
-# sdio extra configs
-hwhdr=0x05ffff031030031003100000
-
-#This generates empty F1, F2 and F3 tuple chains, and may be used if the host SDIO stack does not require the standard tuples.
-RAW1=80 02 fe ff
-
-#This includes the standard FUNCID and FUNCE tuples in the F1, F2, F3 and common CIS.
-#RAW1=80 32 fe 21 02 0c 00 22 2a 01 01 00 00 c5 0 e6 00 00 00 00 00 40 00 00 ff ff 80 00 00 00 00 00 00 00 00 00 00 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 ff 20 04 D0 2 29 43 21 02 0c 00 22 04 00 20 00 5A
+xtalfreq=37400
+boardnum=22
+#macaddr=00:11:22:33:44:55
+#nvram_override=1
+cckdigfilttype=20             #20~26
+ag0=255
+aa2g=3
+ccode=ALL
+#pa0b0=0x13e1
+#pa0b1=0xfdab
+#pa0b2=0xff66
+rssismf2g=0xa
+rssismc2g=0x3
+rssisav2g=0x7
+maxp2ga0=0x46
+sromrev=3
+#il0macaddr=00:11:22:33:44:55
+wl0id=0x431b
+cckPwrOffset=5
+#ofdmdigfilttype2g=4
+ofdm2gpo=0x44444444
+mcs2gpo0=0x6666
+mcs2gpo1=0x6666
+swctrlmap_2g=0x44844484,0x4a8a4282,0x42824282,0x818a82,0x1ff
+rfreg033=0x19
+rfreg033_cck=0x1f
+dacrate2g=160
+txalpfbyp2g=1
+bphyscale=17
+cckPwrIdxCorr=-15
+pacalidx2g=45
+txgaintbl=1
+muxenab=0x10
+#triso2g=9

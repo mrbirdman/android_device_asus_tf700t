@@ -1,3 +1,6 @@
+bin/sensors-config
+bin/glgps
+bin/wifimacwriter
 etc/firmware/nvavp_os_0ff00000.bin
 etc/firmware/nvavp_os_00001000.bin
 etc/firmware/nvavp_os_e0000000.bin
@@ -26,6 +29,8 @@ etc/firmware/nvrm_avp_8e000000.bin
 etc/firmware/nvrm_avp_9e000000.bin
 etc/firmware/nvrm_avp_be000000.bin
 etc/firmware/nvrm_avp_eff00000.bin
+etc/gps/gpsconfig.xml
+etc/wifi/wpa_supplicant.conf
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so

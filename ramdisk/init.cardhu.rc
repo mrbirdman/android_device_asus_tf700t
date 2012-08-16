@@ -48,6 +48,7 @@ on boot
         # bluetooth MAC address programming
         chown bluetooth bluetooth ro.bt.bdaddr_path
         chown bluetooth bluetooth /system/etc/bluetooth
+        chown bluetooth bluetooth /data/misc/bluetooth
         setprop ro.bt.bdaddr_path "/system/etc/bluetooth/bdaddr"
 
     # backlight
@@ -192,8 +193,8 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --scopcm=0,2,0,0,0
     disabled
 
 service gps-daemon /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
-  user root
-  group root
+  user gps
+  group system
   class late_start
 
 service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d

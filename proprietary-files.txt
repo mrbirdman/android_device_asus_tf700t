@@ -44,6 +44,7 @@ lib/hw/audio_policy.tegra.so
 lib/hw/lights.cardhu.so
 lib/hw/gps.tegra.so
 lib/hw/camera.tegra.so
+lib/hw/sensors.cardhu.so
 lib/libasound.so
 lib/libami.so
 lib/libami_sensor_mw.so

@@ -103,7 +103,7 @@ on boot
         symlink /dev/ttyACM2 /dev/log_modem
 
     # Hacky attempt
-        exec /system/bin/surfaceflinger_hack.sh
+    #    exec /system/bin/surfaceflinger_hack.sh
 
 service wifimacwriter /system/bin/wifimacwriter
     class main
